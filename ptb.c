@@ -735,7 +735,7 @@ main (int argc, char **argv) {
   srand((unsigned) time(&t));
 
   /* open capture device */   
-  if ((handle = pcap_open_live(dev, SNAP_LEN, 1, 1000, errbuff)) == NULL) {
+  if ((handle = pcap_open_live(interface, SNAP_LEN, 1, 1000, errbuff)) == NULL) {
     fprintf(stderr, "Couldn't open device %s: %s\n", interface, errbuff); 
     exit(EXIT_FAILURE) ; 
     }     
